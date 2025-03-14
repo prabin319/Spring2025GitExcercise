@@ -1,0 +1,48 @@
+body {
+    text-align: center;
+    background-color: teal;
+    color: aliceblue;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: black;
+}
+
+img {
+    border-radius: 10px;
+    margin: 20px 0;
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin: 10px auto;
+    max-width: 800px;
+}
+
+button {
+    background-color: blueviolet;
+    border: none;
+    color: gold;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #8a2be2; /* A lighter shade of blueviolet */
+}
+

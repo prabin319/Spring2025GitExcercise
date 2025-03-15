@@ -5,28 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Page</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-    <h1>PRABIN KHADKA</h1>
-    <img src="image.jpg" alt="Prabin Khadka" width="300">
-    <p>Hi, I am Prabin Khadka, a passionate and determined individual from the beautiful Himalayan nation of Nepal. Currently, I am pursuing my studies in South Korea, a journey that has been both exciting and challenging. As an international student, I face the common struggles of adapting to a new culture, overcoming language barriers, and maintaining a delicate balance between work and academics. Despite these hurdles, I remain resilient and focused on my goals.</p>
-    <p>With a growing interest in the field of Information Technology, I am determined to carve out a career as a web designer. Though I am relatively new to the IT world, my curiosity and eagerness to learn are driving me to explore the creative and technical aspects of web design. I envision a future where I can combine my technical skills with my creative vision to build user-friendly and visually appealing websites.</p>
-    <p>In my free time, I enjoy exploring new technologies, hiking, and learning about different cultures. I believe that every challenge is an opportunity to grow, and I am excited to see where my journey takes me.</p>
 
-    <button onclick="changeBackgroundColor()">Change Background Color</button>
-    <button onclick="resetBackgroundColor()">Reset Background Color</button>
+    <h1>PRABIN KHADKA</h1>
+
+    <div class="container">
+        <div class="content">
+            <div class="image-container">
+                <img src="image.jpg" alt="Prabin Khadka">
+            </div>
+            <div class="text-container">
+                <p>Hi, I am Prabin Khadka, a passionate and determined individual from the beautiful Himalayan nation of Nepal. Currently, I am pursuing my studies in South Korea, a journey that has been both exciting and challenging. As an international student, I face the common struggles of adapting to a new culture, overcoming language barriers, and maintaining a delicate balance between work and academics. Despite these hurdles, I remain resilient and focused on my goals.</p>
+                <p>With a growing interest in the field of Information Technology, I am determined to carve out a career as a web designer. Though I am relatively new to the IT world, my curiosity and eagerness to learn are driving me to explore the creative and technical aspects of web design. I envision a future where I can combine my technical skills with my creative vision to build user-friendly and visually appealing websites.</p>
+                <p>In my free time, I enjoy exploring new technologies, hiking, and learning about different cultures. I believe that every challenge is an opportunity to grow, and I am excited to see where my journey takes me.</p>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button class="btn-change" onclick="changeBackgroundColor()">Change Background Color</button>
+            <button class="btn-reset" onclick="resetBackgroundColor()">Reset Background Color</button>
+        </div>
+    </div>
 
     <script>
-     function changeBackgroundColor() {
-    const colors = ["#008000", "#FFF99", "#FF0000", "#008080"];
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    document.body.style.backgroundColor = randomColor;          
-    }
+        const colors = ["#FF5733", "#3498DB", "#2ECC71", "#F1C40F"]; // Four major colors
+        let colorIndex = 0;
 
-    // Function to reset the background color
-    function resetBackgroundColor() {
-    document.body.style.backgroundColor = "teal";
-}  
+        function changeBackgroundColor() {
+            document.body.style.backgroundColor = colors[colorIndex];
+            colorIndex = (colorIndex + 1) % colors.length; // Cycle through colors
+        }
+
+        function resetBackgroundColor() {
+            document.body.style.backgroundColor = "#FFFFFF"; // Reset to white
+        }
     </script>
+
 </body>
 </html>
